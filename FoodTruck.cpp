@@ -5,7 +5,7 @@ using namespace std;
 
 FoodTruck::Foodtruck() {
 	numItem - 0;
-	nameFoodTruck = "Csi Food Truck"
+	nameFoodTruck = "Csi Food Truck";
 	cuisine = "Street Food";
 }
 FoodTruck::FoodTruck(String name, string cuisineType) {
