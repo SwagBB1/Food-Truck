@@ -1,0 +1,5 @@
+1 Taco 5.99
+2 Burger 7.99
+3 Hotdogs 3.99
+4 Soda 2.00
+5 Fries 3.00
