@@ -2,7 +2,7 @@
 
 void menufile()
 {
-    ifstream file("Proudct.txt");
+    ifstream file("Product.txt");
 
     if (!file.is_open())
     {
