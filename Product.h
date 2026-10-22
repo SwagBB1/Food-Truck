@@ -6,12 +6,21 @@
 #include <string>
 using namespace std;
 
-struct Product
+class Product
 {
+private:
     int orderNumber;
     string name;
     double price;
-};
+    int quantity;
+
+public:
+    Product();
+
+    void setOrderNumber(int number);
+    void setName(string productName);
+    void setPrice(double productPrice);
+    void setQuantity(int amount);
 
 void menufile();
 
