@@ -16,12 +16,6 @@ private:
 
 public:
     Product();
-
-    void setOrderNumber(int number);
-    void setName(string productName);
-    void setPrice(double productPrice);
-    void setQuantity(int amount);
-
 void menufile();
 
 #endif
