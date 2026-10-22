@@ -41,7 +41,7 @@ Quantityitems = quantity;
      int SetQuantity() const {
       return quantity;
 }
-
+};
 
 void menufile();
 
