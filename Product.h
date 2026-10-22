@@ -16,6 +16,12 @@ private:
 
 public:
     Product();
+void setOrderNumber(int Number)
+{
+Number = orderNumber;
+}
+
+
 void menufile();
 
 #endif
