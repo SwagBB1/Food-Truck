@@ -8,6 +8,9 @@ int main(){
     cout << "Take a look at are menu: " << endl;
     cout << "------------------------------Menu----------------------------------------------" << endl;
     cout << endl;
-    menufile();
+    
+	myFoodTruck.loadMenu();
+	myFoodTruck.takeOrder();
+	myFoodTruck.printReceipt();
     return 0;
 }
