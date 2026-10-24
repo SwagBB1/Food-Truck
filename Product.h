@@ -43,6 +43,21 @@ Quantityitems = quantity;
 }
 };
 
+class FoodTruck
+{
+private:
+    int numItems;
+    string nameFoodTruck;
+    string cuisine;
+
+public:
+    FoodTruck();
+    FoodTruck(string name, string cuisineType);
+
+    int getNumItems() const;
+    string getNameFoodTruck() const;
+    string Cuisine() const;
+
 void menufile();
 
 #endif
