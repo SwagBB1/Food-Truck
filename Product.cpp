@@ -4,7 +4,7 @@
 #include <ctime>
 using namespace std;
 
-//FoodTruck class usage
+//FoodTruck class usage and removed MAX_ITEMS
 FoodTruck::FoodTruck() {
     numItems = 0;
     nameFoodTruck = "Csi Food Truck";
