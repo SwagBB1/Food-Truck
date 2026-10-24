@@ -62,6 +62,36 @@ void FoodTruck::loadMenu() {
     file.close();
 }
 
+//Jose's Function
+void FoodTruck::takeOrder() {
+    if (numItems-- 0) {
+        return;
+    }
+    int selections = -1;
+    int qty = 0;
+	cout << "\nEnter the order number of the item you want to order (or 0 to finish): ";
+    while (true) {
+        cin >> selection;
+        if (selection == 0) {
+            break;
+        }
+        if (selection < 1 || selection > numItems) {
+            cout << "Invalid Order Number. Please try again: ";
+            continue;
+        }
+		cout << "How many " << menu[selection - 1].getName() << "s would you like to order? ";
+		cin >> qty;
+        if (qty > 0) {
+            cartQuantities[selection - 1] += qty;
+            cout << "Added " << qty << " " << menu[selection - 1].getName() << "(s) to your order." << endl;
+        }
+        else {
+            cout << "Invalid quantity. Quantity must be greater than 0 Please try again." << endl;
+        }
+		cout << "\nEnter another order number of the item you want to order (or 0 to finish): ";
+    }
+}
+//Jose's Function
 void FoodTruck::printReceipt() {
     double subtotal = 0.0;
     bool orderedAnything = false;
