@@ -10,9 +10,9 @@ FoodTruck::FoodTruck() {
 }
 
 FoodTruck::FoodTruck(string name, string cuisineType) {
+    numItems = 0;
     nameFoodTruck = name;
     cuisine = cuisineType;
-    numItems = 0;
 }
 
 int FoodTruck::getNumItems() const {
@@ -25,6 +25,24 @@ string FoodTruck::getNameFoodTruck() const {
 
 string FoodTruck::Cuisine() const {
     return cuisine;
+}
+
+void FoodTruck::setNumItems(int num) {
+    if (num >= 0 && num <= MAX_ITEMS) {
+        numItems = num;
+    } else {
+        cout << "Invalid number of items. It must be between 0 and " << MAX_ITEMS << "." << endl;
+	}
+    numItems = num;
+}
+
+void FoodTruck::setNameFoodTruck(const string& name) {
+    nameFoodTruck = name;
+}
+
+void FoodTruck::setCuisine(const string& cuisineType) {
+    cuisine = cuisineType;
+}
 
 void menufile()
 {
