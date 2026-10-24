@@ -43,21 +43,30 @@ Quantityitems = quantity;
 }
 };
 
-class FoodTruck
-{
+//Jose's Class
+class FoodTruck {
 private:
     int numItems;
     string nameFoodTruck;
     string cuisine;
-
+    //Dynamic Array of Products
+    Product* menu;
+    int* cartQuantities;
 public:
     FoodTruck();
-    FoodTruck(string name, string cuisineType);
-
+    FoodTruck(string, string);
+    //Getters
     int getNumItems() const;
     string getNameFoodTruck() const;
     string Cuisine() const;
-
-void menufile();
+    //Setters
+    void setNumItems(int)
+    void setNameFoodTruck(string);
+    void getCruisine(string);
+    //Functions
+    void loadMenu();
+    void takeOrder();
+    void printReciept();
+};
 
 #endif
