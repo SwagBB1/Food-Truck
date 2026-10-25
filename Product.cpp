@@ -1,4 +1,4 @@
-#include "Product.h"
+	#include "Product.h"
 #include <iostream>
 #include <iomanip>
 #include <ctime>
@@ -91,6 +91,16 @@ void FoodTruck::takeOrder() {
 		cout << "\nEnter another order number of the item you want to order (or 0 to finish): ";
     }
 }
+//JeanCarlos's Funcion:
+Double FoodTruck::TotalOrderAmount() const {
+     double total = 0.0;
+	for( int i = 0; i < numItems; i++){
+		total += cartQuantities[i] * 
+
+
+
+}
+
 //Jose's Function
 void FoodTruck::printReceipt() {
     double subtotal = 0.0;
