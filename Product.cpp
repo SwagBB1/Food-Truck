@@ -179,6 +179,15 @@ double FoodTruck::TotalOrderAmount() const {
 	}
 	return total;
 }
+//JeanCarlos's Function:
+void Product::CustomerNameAndOrderNumber() const {
+
+    
+
+
+
+}
+
 
 //Jose's Function
 if (numItems <= 0 || menu == nullptr ||
@@ -186,8 +195,7 @@ if (numItems <= 0 || menu == nullptr ||
         cout << "No menu is available to print a receipt."
              << endl;
         return;
-    }
-
+}
     bool orderedAnything = false;
 
     for (int i = 0; i < numItems; i++) {
