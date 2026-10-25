@@ -71,6 +71,7 @@ public:
     // Functions
     void loadMenu();
     void takeOrder();
+    void removeItem();
     double TotalOrderAmount() const;
     void printReceipt();
 };
