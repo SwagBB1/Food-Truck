@@ -11,6 +11,17 @@ int main(){
     
 	myFoodTruck.loadMenu();
 	myFoodTruck.takeOrder();
+	myFoodTruck.loadMenu();
+	myFoodTruck.takeOrder();
+
+	char choice;
+
+	cout << "\nWould you like to remove an item? (y/n): ";
+	cin >> choice;
+
+	if (choice == 'y' || choice == 'Y') {
+    	myFoodTruck.removeItem();
+	}
+
 	myFoodTruck.printReceipt();
-    return 0;
-}
+	}
