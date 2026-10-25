@@ -42,6 +42,7 @@ public:
      int SetQuantity() const {
       return quantity;
     }
+    void CustomerNameAndOrderNumber() const;
 };
 
 //Jose's Class
