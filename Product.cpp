@@ -236,9 +236,6 @@ double FoodTruck::TotalOrderAmount() const {
 }
 //JeanCarlos's Function:
 void Product::CustomerNameAndOrderNumber() const {
-    string customerName;
-    int orderNumber;
-
     cout << "Enter customer name: ";
     getline(cin, customerName);
 
