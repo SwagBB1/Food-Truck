@@ -171,6 +171,61 @@ void FoodTruck::takeOrder() {
     }
 }
 
+void FoodTruck::removeItem() {
+    if (numItems <= 0 || menu == nullptr ||
+        cartQuantities == nullptr) {
+        cout << "No menu items available." << endl;
+        return;
+    }
+
+    cout << "\n--- Remove Item from Order ---" << endl;
+
+    bool hasItems = false;
+
+    for (int i = 0; i < numItems; i++) {
+        if (cartQuantities[i] > 0) {
+            cout << menu[i].getOrderNumber() << ". "
+                 << menu[i].getName()
+                 << " - Quantity: "
+                 << cartQuantities[i] << endl;
+
+            hasItems = true;
+        }
+    }
+
+    if (!hasItems) {
+        cout << "Your order is empty." << endl;
+        return;
+    }
+
+    int selection;
+
+    cout << "Enter the order number of the item to remove: ";
+
+    if (!(cin >> selection)) {
+        cout << "Invalid input." << endl;
+        cin.clear();
+        cin.ignore(10000, '\n');
+        return;
+    }
+
+    for (int i = 0; i < numItems; i++) {
+        if (menu[i].getOrderNumber() == selection &&
+            cartQuantities[i] > 0) {
+
+            cartQuantities[i] = 0;
+
+            cout << menu[i].getName()
+                 << " has been removed from your order."
+                 << endl;
+
+            return;
+        }
+    }
+
+    cout << "Item not found in your order." << endl;
+}
+
 //JeanCarlos's Function:
 double FoodTruck::TotalOrderAmount() const {
     double total = 0.0;
@@ -181,11 +236,17 @@ double FoodTruck::TotalOrderAmount() const {
 }
 //JeanCarlos's Function:
 void Product::CustomerNameAndOrderNumber() const {
+    string customerName;
+    int orderNumber;
 
-    
+    cout << "Enter customer name: ";
+    cin >> customerName;
 
+    cout << "Enter order number: ";
+    cin >> orderNumber;
 
-
+    cout << "\nCustomer Name: " << customerName << endl;
+    cout << "Order Number: " << orderNumber << endl;
 }
 
 
