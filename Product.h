@@ -10,7 +10,7 @@ class Product
 {
 private:
     int orderNumber;
-    string name;
+    string CustomerName;
     double price;
     int quantity;
 
@@ -19,8 +19,8 @@ public:
     void setOrderNumber(int Number) {
         orderNumber = Number;
     }
-    void setName(const string& foodName) {
-        name = foodName;
+    void setName(const string& CustomerNamee) {
+        name = CustomerName;
     }
     void SetFoodPrice(double FoodPrice) {
         price = FoodPrice;
