@@ -16,19 +16,20 @@ private:
 
 public:
     Product();
-    void setOrderNumber(int Number){
-        Number = orderNumber;
+    void setOrderNumber(int Number) {
+        orderNumber = Number;
     }
-    void setName(const std::string& foodName) {
+    void setName(const string& foodName) {
         name = foodName;
     }
-   
-    void SetFoodPrice(double FoodPrice){
-       FoodPrice = price; 
+    void SetFoodPrice(double FoodPrice) {
+        price = FoodPrice;
     }
-    void SetQuantity(int Quantityitems){
-        Quantityitems = quantity;
+
+    void SetQuantity(int Quantityitems) {
+        quantity = Quantityitems;
     }
+
     int setOrderNumber() const {
       return orderNumber;
     }
@@ -54,24 +55,24 @@ private:
     int* cartQuantities;
 public:
     FoodTruck();
-    FoodTruck(string, string);
-    
-    //Getters
-    int getOrderNumber() const;
-    std::string getName() const;
-    double getPrice() const;
-    int getQuantity() const;
-    
-    //Setters
+    FoodTruck(string name, string cuisineType);
+    ~FoodTruck();
+
+    // Getters
+    int getNumItems() const;
+    string getNameFoodTruck() const;
+    string getCuisine() const;
+
+    // Setters
     void setNumItems(int count);
-    void setNameFoodTruck(const std::string& name);
-    void setCuisine(const std::string& cuisineType);
-    void printReceipt();
-    
-    //Functions
+    void setNameFoodTruck(const string& name);
+    void setCuisine(const string& cuisineType);
+
+    // Functions
     void loadMenu();
     void takeOrder();
-    void printReciept();
+    double TotalOrderAmount() const;
+    void printReceipt();
 };
 
 #endif
