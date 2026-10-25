@@ -240,7 +240,7 @@ void Product::CustomerNameAndOrderNumber() const {
     int orderNumber;
 
     cout << "Enter customer name: ";
-    cin >> customerName;
+    getline(cin, customerName);
 
     cout << "Enter order number: ";
     cin >> orderNumber;
