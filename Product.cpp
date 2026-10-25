@@ -95,10 +95,9 @@ void FoodTruck::takeOrder() {
 Double FoodTruck::TotalOrderAmount() const {
      double total = 0.0;
 	for( int i = 0; i < numItems; i++){
-		total += cartQuantities[i] * 
-
-
-
+		total += cartQuantities[i] * menu[i].getPrice();
+	}
+return total;
 }
 
 //Jose's Function
